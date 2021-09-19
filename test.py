@@ -4,6 +4,7 @@ from settings.phantom_setting import *
 
 print(driver.current_url)
 print(driver.title)
+print("??")
 
 elem = driver.find_element_by_name("q")
 
