@@ -9,7 +9,7 @@ driver = webdriver.Chrome(chd)
 
 # 크롤링할 사이트 호출
 # driver.get("https://kwonputer.com")
-driver.get("https://www.python.org/")
+# driver.get("https://www.python.org/")
 
 # 셀레니움은 웹테스트를 위한 프레임워크로 다음과 같은 방식으로 웹테스트를 자동으로 진행함
 # 아래의 내용이 없으면 프로그램 종료
