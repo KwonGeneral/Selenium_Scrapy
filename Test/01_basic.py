@@ -1,10 +1,10 @@
 
-# from settings.selenium_setting import *
-from settings.phantom_setting import *
+# from Settings.selenium_setting import *
+# from Settings.phantom_setting import *
+from Settings.headless_setting import *
 
 print(driver.current_url)
 print(driver.title)
-print("??")
 
 elem = driver.find_element_by_name("q")
 
