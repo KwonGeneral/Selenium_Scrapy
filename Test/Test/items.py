@@ -12,3 +12,13 @@ class TestItem(scrapy.Item):
     title = scrapy.Field()
     price = scrapy.Field()
 
+
+class CategoryItem(scrapy.Item):
+    main_category_name = scrapy.Field()
+    sub_category_name = scrapy.Field()
+    title = scrapy.Field()
+    ranking = scrapy.Field()
+    ori_price = scrapy.Field()
+    dis_price = scrapy.Field()
+    discount_percent = scrapy.Field()
+

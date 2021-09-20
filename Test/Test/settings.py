@@ -60,13 +60,6 @@ ROBOTSTXT_OBEY = True
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
-# 파이프라인(pipelines.py) 사용을 위해 별도 설정
-# 여러 클래스가 있을 경우, 숫자가 낮을 수록 먼저 실행됨
-# 일종의 우선순위 번호로, 0 ~ 1000 숫자 중에 임의로 숫자를 부여하면 됌.
-# 스파이더 실행 후, Enabled item pipelines를 터미널에서 확인해서, 설정 적용 여부 확인 가능
-ITEM_PIPELINES = {
-   'Test.pipelines.TestPipeline': 300,
-}
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
@@ -91,4 +84,23 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+
+# 파이프라인(pipelines.py) 사용을 위해 별도 설정
+# 여러 클래스가 있을 경우, 숫자가 낮을 수록 먼저 실행됨
+# 일종의 우선순위 번호로, 0 ~ 1000 숫자 중에 임의로 숫자를 부여하면 됌.
+# 스파이더 실행 후, Enabled item pipelines를 터미널에서 확인해서, 설정 적용 여부 확인 가능
+ITEM_PIPELINES = {
+   # 'Test.pipelines.TestPipeline': 300,
+   'Test.pipelines.CategoryPipeline': 300,
+}
+
+# 한글 깨짐 현상 방지
 FEED_EXPORT_ENCODING = 'utf-8'
+
+# 중복된 url을 제대로 크롤링 하지 않을 경우 설정
+DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
+
+# 로그 파일 저장
+LOG_FILE = "log.txt"
+
+

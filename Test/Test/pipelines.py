@@ -17,3 +17,8 @@ class TestPipeline:
         else:
             raise DropItem("40000보다 낮은 가격의 드롭 아이템")
 
+
+class CategoryPipeline:
+    def process_item(self, item, spider):
+        return item
+
